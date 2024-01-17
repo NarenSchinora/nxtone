@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradbac"
+    android:fitsSystemWindows="true"
+    tools:context=".chats"
+    android:id="@+id/cons"
+    >
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/bck"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:foregroundGravity="center"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000">
+
+            <ImageView
+                android:id="@+id/usxrpic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/forphoto"
+
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="MS"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_anchor="@id/usxrpic"
+                app:layout_anchorGravity="center" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tdbt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:text="Username"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <ImageButton
+            android:id="@+id/bazck"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginEnd="10dp"
+            android:background="#00000000"
+            android:padding="10dp"
+            android:src="@drawable/ic_baseline_people_alt_24" />
+
+        <ImageButton
+            android:id="@+id/bazc"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="#00000000"
+            android:padding="10dp"
+            android:src="@drawable/ic_round_email_24"
+
+            />
+
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/fortouch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/scroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/linsa"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/forpa"
+            android:orientation="vertical"
+            android:visibility="invisible"
+
+            >
+
+            <ImageButton
+                android:id="@+id/bc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/box"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_double_arrow_24"
+
+
+                />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_weight="0.95"
+                android:clipToPadding="true"
+                android:fadingEdge="vertical"
+                android:fadingEdgeLength="25dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="15dp"
+                android:layout_marginStart="5dp"
+                android:requiresFadingEdge="vertical"
+
+                />
+
+        </LinearLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/myedits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            app:elevation="0dp"
+            android:src="@drawable/ic_baseline_close_24"
+            app:fabSize="mini"
+            android:visibility="gone"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/scroll"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:rippleColor="#ff9d00"
+            app:backgroundTint="#ff5d38"
+            app:tint="@color/white" />
+
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/liya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/lsz"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/fortouch"
+        >
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:letterSpacing="0.07"
+            android:text=""
+            android:backgroundTint="#fc8403"
+            android:maxLength="20"
+            android:layout_marginStart="18.5dp"
+            android:layout_marginEnd="18.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:collapsedSize="35dp"
+            app:icon="@drawable/ic_baseline_keyboard_arrow_down_24"
+            app:iconSize="26dp"
+            app:iconTint="@color/white"
+            app:rippleColor="@color/white"
+            />
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/lsz"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/gradbac"
+        app:layout_constraintBottom_toTopOf="@id/lit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        >
+
+
+        <View
+            android:id="@+id/divi"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:elevation="5dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/black"
+            android:background="?android:attr/listDivider" />
+        <LinearLayout
+            android:id="@+id/hola"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="10dp"
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/quick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fugaz_one"
+                android:layout_weight="0.8"
+                android:text="Quick Reply"
+                android:textColor="#1B1616"
+                android:textSize="15sp"
+                />
+            <ImageView
+                android:clickable="true"
+                android:id="@+id/canc"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_weight="0.05"
+                android:src="@drawable/ic_baseline_close_24" />
+
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/quicyk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingStart="20dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:text="Quick Reply to users\nhello\nhii"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:background="@drawable/forquickreply"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/gradbac"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingBottom="5dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="normal"
+            android:id="@+id/floats"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            app:elevation="0dp"
+            android:visibility="invisible"
+            android:backgroundTint="#04ba6e"
+            app:rippleColor="#ff9d00"
+            android:src="@drawable/ic_baseline_keyboard_voice_24"
+            app:tint="@color/white"
+            />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/flot"
+                app:icon="@drawable/ic_baseline_keyboard_voice_24"
+                app:iconSize="28dp"
+                android:paddingStart="20dp"
+                app:iconTint="@color/white"
+                app:backgroundTint="@null"
+                android:stateListAnimator="@null"
+                android:background="@drawable/frax"
+                android:paddingTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="5dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignEnd="@id/edi"
+                android:layout_alignStart="@id/floats"
+                android:layout_alignTop="@id/floats"
+                android:layout_alignBottom="@id/floats"
+                app:elevation="0dp"
+                />
+
+        <EditText
+            android:id="@+id/edi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="textMultiLine"
+            android:hint="Chat"
+            android:elevation="2dp"
+            android:scrollbars="vertical"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:scrollbarSize="2dp"
+            android:scrollbarThumbVertical="@drawable/scroll"
+            android:layout_marginStart="10dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:ems="5"
+            android:textColorHint="#6f7370"
+            android:paddingStart="19dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:imeOptions="actionDone"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/corners"
+            android:textColor="#000000"
+            android:layout_toEndOf="@id/floats"
+            />
+
+        </RelativeLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fabSize="normal"
+                android:id="@+id/cat"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:outlineAmbientShadowColor="#00000000"
+                android:outlineSpotShadowColor="#00000000"
+                app:rippleColor="#ff9d00"
+                android:src="@drawable/ic_baseline_add_a_photo_24"
+                app:tint="@color/white"
+                />
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fabSize="normal"
+                android:id="@+id/edzt"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                app:rippleColor="#ff9d00"
+                app:backgroundTint="#9d0be6"
+                android:src="@drawable/ic_baseline_question_answer_24"
+                android:visibility="invisible"
+                app:tint="@color/white"
+                />
+
+
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fabSize="normal"
+                android:visibility="invisible"
+                android:id="@+id/chat"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                app:elevation="0dp"
+                app:rippleColor="#ff9d00"
+                style="@style/floating"
+                android:src="@drawable/ic_baseline_chat_24"
+                app:tint="@color/white"
+                />
+
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <HorizontalScrollView
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/lit"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:measureAllChildren="false"
+        android:scrollbars="none"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout
+            android:id="@+id/linas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/caxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#9d0be6"
+                android:elevation="5dp"
+                android:text="Edit"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:fabSize="normal"
+                app:icon="@drawable/ic_baseline_edit_24"
+                app:iconTint="@color/white"
+                app:rippleColor="#ff9d00" />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/cazt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#fc4903"
+                android:elevation="5dp"
+                android:text="Delete"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:fabSize="normal"
+                app:icon="@drawable/ic_baseline_delete_24"
+                app:iconTint="@color/white"
+                app:rippleColor="#ffd500" />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/cact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#00c434"
+                android:text="copy"
+                android:textColor="#242423"
+                android:textStyle="bold"
+                app:fabSize="normal"
+                app:icon="@drawable/ic_baseline_content_copy_24"
+                app:iconTint="@color/white"
+                app:rippleColor="#88ff00" />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/cavt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#e6cb00"
+                android:text="quick reply"
+                android:textColor="#242423"
+                android:textStyle="bold"
+                app:fabSize="normal"
+                app:icon="@drawable/ic_baseline_quickreply_24"
+                app:iconTint="@color/white"
+                app:rippleColor="#eb38dc" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/snack"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toTopOf="@+id/lit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

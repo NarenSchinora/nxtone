@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#00000000"
+    android:layout_marginEnd="1dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#00000000"
+        android:gravity="end"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="30dp"
+            android:layout_marginEnd="10dp"
+            app:cardElevation="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp">
+
+
+        <ImageView
+            android:id="@+id/sendim"
+            android:maxWidth="150dp"
+            android:maxHeight="200dp"
+            android:minWidth="100dp"
+            android:minHeight="150dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            app:srcCompat="@drawable/placeholder"
+            />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="4dp"
+            android:background="#00000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/mypic"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/forphoto" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mytext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="MS"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_anchor="@id/mypic"
+                app:layout_anchorGravity="center" />
+
+
+            <ImageView
+                android:id="@+id/pendin"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/pending"
+                android:padding="2dp"
+                android:src="@drawable/ic_baseline_access_time_24"/>
+
+
+            <ImageView
+                android:id="@+id/read"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:visibility="gone"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/forreadmessage"
+                android:padding="2dp"
+                android:src="@drawable/ic_baseline_mark_chat_read_24" />
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

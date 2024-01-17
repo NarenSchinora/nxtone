@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">nxtone</string>
+    <string name="appame">"@gmail.com"</string>
+    <string name="prophoto">Choose a photo that you would to like share with all your friends you chat, and giving a unique look on the top of your chats.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

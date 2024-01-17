@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1028309782459",
+    "project_id": "nxtone-6f7f4",
+    "storage_bucket": "nxtone-6f7f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028309782459:android:f387b9d04444704129fe9e",
+        "android_client_info": {
+          "package_name": "com.myappf.nxtone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028309782459-js9bkkmfc6g7fchpd02bukaf48u2p7h2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvmhMBVNiej5XWYyaskg1H7hMWYIAfX7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028309782459-js9bkkmfc6g7fchpd02bukaf48u2p7h2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

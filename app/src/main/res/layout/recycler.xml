@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/linlat"
+    android:layout_marginTop="5dp"
+    android:paddingTop="10dp"
+    android:paddingStart="10dp"
+    android:paddingBottom="10dp"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    >
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+
+        android:layout_gravity="center_vertical"
+
+        >
+
+        <ImageView
+            android:id="@+id/userpic"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/forphoto"
+
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textforimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#FFFAFA"
+            android:textSize="25sp" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <TextView
+        android:id="@+id/usernames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.9"
+        android:fontFamily="@font/doppio_one"
+        android:maxWidth="80dp"
+        android:paddingStart="15dp"
+        android:autoSizeMaxTextSize="24sp"
+        android:layout_marginEnd="20dp"
+        android:text="User"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="2dp"
+        android:textSize="20dp"
+        android:textColor="#2e2e2b"
+        android:textFontWeight="100"
+        android:maxLines="1"
+        android:ellipsize="end"
+        />
+
+
+
+
+</LinearLayout>

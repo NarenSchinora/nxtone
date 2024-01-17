@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/linla"
+    android:backgroundTint="@color/white"
+    >
+
+
+
+
+
+    <ImageView
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:background="@drawable/carddt"
+        android:layout_gravity="left"
+        android:visibility="invisible"
+        android:id="@+id/cards"
+        />
+
+
+        <ImageView
+            android:id="@+id/usrpic"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/forphoto"
+
+            />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:elevation="15dp"
+            android:textColor="#FFFAFA"
+            android:textSize="25sp" />
+
+
+    <TextView
+        android:id="@+id/gonetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

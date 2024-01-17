@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#00000000"
+        android:gravity="start"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:background="#00000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/urpic"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/forphoto" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tedsz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="MS"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_anchor="@id/urpic"
+                app:layout_anchorGravity="center" />
+
+
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="#00000000"
+                android:id="@+id/cdd"
+                android:visibility="gone"
+                >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/sgg"
+            android:maxWidth="180dp"
+            android:padding="13dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"/>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="top|end"
+                    android:background="@drawable/nowitstime"
+                    android:padding="4dp"
+                    app:layout_anchor="@id/tis"
+                    android:src="@drawable/ic_round_quickreply_24" />
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:background="#00000000"
+            >
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/nowcayoubeatme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/otherrepplt"
+                android:padding="13dp"
+                android:text="dsd"
+                android:visibility="gone"
+                android:maxWidth="250dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tzx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/fords"
+            android:padding="13dp"
+            android:text="d"
+            android:maxWidth="250dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/xwx"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_gravity="top"
+                android:background="@drawable/fordr"
+                android:padding="4dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_baseline_edit_24" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/forems"
+            android:visibility="gone"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="2dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/nowitstime"
+            android:padding="4dp"
+            android:src="@drawable/ic_round_quickreply_24"
+            app:tint="@color/white" />
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
